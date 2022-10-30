@@ -7,10 +7,8 @@ var majorityElement = function (nums) {
     if (data[k])  data[k] += 1;
     else data[k] = 1;
   }
-  let max = 0;
   for (key in data) {
-    if (data[key] > nums.length / 2) max = data[key];
-    if (max)  return key;
+    if (data[key] > nums.length / 2) return key;
   }
 };
 
